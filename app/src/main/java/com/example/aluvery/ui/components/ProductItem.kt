@@ -1,6 +1,5 @@
 package com.example.aluvery.ui.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,7 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -32,7 +30,6 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import coil.compose.AsyncImagePainter
 import com.example.aluvery.R
 import com.example.aluvery.model.Product
 import com.example.aluvery.ui.extensions.toBrazilianCurrency
@@ -40,13 +37,16 @@ import com.example.aluvery.ui.theme.AluveryTheme
 import java.math.BigDecimal
 
 @Composable
-fun ProductItem(product: Product) {
+fun ProductItem(
+    product: Product,
+    modifier: Modifier = Modifier
+) {
     Surface(
         shape = RoundedCornerShape(15.dp),
         elevation = 4.dp
     ) {
         Column(
-            Modifier
+            modifier
                 .heightIn(250.dp, 300.dp)
                 .width(200.dp)
         ) {

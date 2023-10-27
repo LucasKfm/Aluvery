@@ -24,7 +24,8 @@ fun App() {
     AluveryTheme {
         Surface {
             HomeScreen(
-                sampleSections
+                sampleSections,
+
             )
         }
     }
